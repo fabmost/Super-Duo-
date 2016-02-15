@@ -53,11 +53,9 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         IS_TABLET = isTablet();
-        if(IS_TABLET){
-            setContentView(R.layout.activity_main_tablet);
-        }else {
+
             setContentView(R.layout.activity_main);
-        }
+        
 
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.container, new ListOfBooks())
